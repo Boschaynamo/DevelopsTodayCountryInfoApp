@@ -28,4 +28,4 @@ Frontend will be running on port 5173, you can change it on .env file.
 
 
 ## Important
-.env file is included in this repository because this is a testing application.
+.env file is included in this repository because this is a testing application and no critical information is being provided.
