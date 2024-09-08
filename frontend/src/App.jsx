@@ -20,13 +20,16 @@ function App() {
     setSelectedCountry(countries.find(country => country.name ===countryNameClicked))
   }
   return (
-    <>
+    <div className="bg-gradient-to-r from-indigo-300 to-purple-200">
+      
       {selectedCountry ? (
         <CountryContainer country={selectedCountry} handleClick={handleClick}/>
-      ) : (
+      ) : (<>
+        <h1 className="flex justify-center py-10 text-4xl md:text-6xl">Country Info App</h1>
         <CountriesContainer countries={countries} handleClick={handleClick} />
+        </>
       )}
-    </>
+    </div>
   );
 }
 
