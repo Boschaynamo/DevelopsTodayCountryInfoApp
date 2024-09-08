@@ -37,7 +37,7 @@ app.get("/:countryCode", async (req, res) => {
     );
     const allPopulation = await responsePopulationFetch.json();
     const countryPopulation = allPopulation.data.find(
-      (eachCountry) => eachCountry.country === countryName
+      (eachCountry) => eachCountry.country.includes(countryName) 
     );
 
     //flag
