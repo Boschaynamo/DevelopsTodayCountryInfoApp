@@ -47,7 +47,7 @@ app.get("/:countryCode", async (req, res) => {
     res.status(200).json({
       borders,
       countryPopulation: countryPopulation.populationCounts,
-      flag:countryFlag.flag
+      flag: countryFlag.flag,
     });
   } catch (error) {
     res.status(500).json({ error: error.message });
