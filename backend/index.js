@@ -1,9 +1,13 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require('cors');
 const app = express();
 const port = 3000;
 
 const API_ENDPOINT = process.env.URL_ALL_COUNTRIES;
+
+app.use(express.json())
+app.use(cors())
 
 app.get("/", (req, res) => {
   //All countries
